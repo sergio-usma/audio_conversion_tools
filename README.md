@@ -38,6 +38,39 @@ python script.py
 - Check the log file for errors.
 - Verify that the input directory contains `.m4a` or `.opus` files.
 
+# 📌 Embed Thumbnails in MP3 Metadata
+
+This script automatically embeds corresponding JPG/JPEG images as thumbnails in MP3 files' metadata. It scans a given folder, matches MP3 files with their respective images, and updates the metadata accordingly. 🎵🖼️
+
+## ✨ Features
+- 🔍 Scans the specified folder for MP3 files.
+- 🔗 Finds and matches images (`.jpg` or `.jpeg`) with the same filename as the MP3.
+- 🛠️ Embeds the image as the MP3 file's thumbnail metadata.
+- ✅ Ensures that only one thumbnail is embedded per file (removes existing album art to avoid duplicates).
+- 🚀 Saves the updated MP3 file with the new album cover.
+
+## 🛠️ Requirements
+Make sure you have Python installed and the following library:
+
+```bash
+pip install mutagen
+```
+
+## 📌 How to Use
+1. Run the script and provide the folder path containing the MP3 and image files:
+
+```bash
+python embed_thumbnails.py
+```
+
+2. Enter the folder path when prompted.
+3. The script will process all MP3 files and embed the corresponding image as a thumbnail.
+
+## ⚠️ Notes
+- The image file must have the exact same name as the MP3 file (excluding the extension).
+- Supported image formats: `.jpg`, `.jpeg`.
+- The script automatically removes existing album art before adding the new one.
+
 ## 📜 License
 This project is licensed under the **MIT License**. See the `LICENSE` file in the root folder for details.
 
